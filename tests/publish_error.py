@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 from threading import Thread
 from gi.repository import GLib, Gio
@@ -89,7 +90,7 @@ with bus.publish("net.lew21.pydbus.tests.Test", TestObject()):
 		try:
 			remote.Get("net.lew21.pydbus.tests.TestInterface", "Foo")
 		except ExceptionC as e:
-			assert str(e) == "No such property 'Foo'"
+			assert str(e) == "No such property “Foo”"
 
 		# Test default errors.
 		try:
